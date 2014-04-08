@@ -1,4 +1,5 @@
-abs-api-event-sample
-====================
+# abs-api-event-sample
 
-ABS API Event Sample
+An example on how to use [ABS API Event][1].
+
+[1]: https://github.com/CrispOSS/abs-api-event
