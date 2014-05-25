@@ -8,18 +8,23 @@ import abs.api.event.EventContext;
  */
 public class Main {
 
-	public static void main(String[] args) throws InterruptedException {
-		EventContext context = new EventContext();
+	private EventContext context = new EventContext();
+	private Echo e1;
+	private Echo e2;
+	private Actor a1;
+	private Actor a2;
 
-		Echo e1 = new Echo(1);
-		Echo e2 = new Echo(2);
+	public Main() {
+		e1 = new Echo(1);
+		e2 = new Echo(2);
 
-		Actor a1 = context.newActor("e1", e1);
-		Actor a2 = context.newActor("e2", e2);
+		a1 = context.newActor("e1", e1);
+		a2 = context.newActor("e2", e2);
 
+	}
+
+	public void start() {
 		a1.ask(a2, "a random message");
-
-		Thread.sleep(1000000000);
 	}
 
 }
